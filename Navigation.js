@@ -8,10 +8,12 @@ import { ImageBackground } from "react-native";
 import HomeScreen from "./screens/HomeScreen"
 import SettingsScreen from "./screens/SettingsScreen"
 import StackScreen from "./screens/StackScreen"
+import AlimentoScreen from "./screens/AlimentoScreen";
 
 import { MaterialCommunityIcons, MaterialIcons } from '@expo/vector-icons';
 
 const HomeStackNavigation = createNativeStackNavigator();
+
 
 function MyStack() {
     return (
@@ -27,6 +29,12 @@ function MyStack() {
             name="Stack"
             component={StackScreen}
             />
+
+            <HomeStackNavigation.Screen
+            name="Alimento"
+            component={AlimentoScreen}
+            />
+
         </HomeStackNavigation.Navigator>
     )
 } 
@@ -41,6 +49,7 @@ function MyTabs() {
             screenOptions={{
                 tabBarActiveTintColor: 'purple',
             }}
+            
         >
             <Tab.Screen 
             name="Home" 
@@ -64,7 +73,6 @@ function MyTabs() {
                     <MaterialIcons name="pets" size={24} color="black" />
                 ),
                 headerShown: false,
-                
             }}
             />
 

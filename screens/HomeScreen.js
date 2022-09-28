@@ -32,7 +32,7 @@ const navigation = useNavigation();
             <View style={[styles.box]}>
               <TouchableOpacity style={[styles.touchOpac, styles.back]}>
                   <ImageBackground source={require('../assets/hue.png')}>
-                    <Text onPress={()=> navigation.navigate("Stack")} style= {[styles.textButton]}></Text>
+                    <Text onPress={()=> navigation.navigate("Alimento")} style= {[styles.textButton]}></Text>
                   </ImageBackground>
               </TouchableOpacity>
             </View>
